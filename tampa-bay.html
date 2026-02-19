@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>360° Window Wash | Dirty Windows? We Fix That.</title>
-<meta name="description" content="Dirty windows? 360° Window Wash is Tampa Bay's top-rated window cleaning company. Residential, commercial, power washing, screen repair, and gutter cleaning across Pinellas, Hillsborough, Manatee & Sarasota County.">
-<meta property="og:title" content="360° Window Wash | Crystal Clear Windows. Guaranteed.">
-<meta property="og:description" content="Dirty Windows? We fix that. Crystal clear windows guaranteed. Serving Pinellas, Hillsborough, Manatee & Sarasota Counties.">
+<title>Tampa Bay Window Cleaning | 360° Window Wash | Crystal Clear Results</title>
+<meta name="description" content="Tampa Bay's #1 rated window cleaning company. Residential and commercial window cleaning, power washing, screen repair, and gutter cleaning across Pinellas, Hillsborough, Manatee & Sarasota Counties.">
+<meta property="og:title" content="Tampa Bay Window Cleaning | 360° Window Wash | Crystal Clear Results">
+<meta property="og:description" content="Tampa Bay's #1 rated window cleaning. Crystal clear windows guaranteed. Serving Pinellas, Hillsborough, Manatee & Sarasota Counties.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://360windowwash.com/logo-full.png">
 <meta property="og:image:width" content="1200">
@@ -93,11 +93,10 @@ a{text-decoration:none;color:inherit}
 .stat-label{color:var(--gray-400);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:.25rem}
 
 /* TRUST BAR */
-.trust-bar{background:var(--blue-deeper);padding:1.25rem 1rem;border-bottom:1px solid rgba(75,163,216,.2);border-top:1px solid rgba(75,163,216,.1)}
-.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:.75rem 1rem;color:rgba(255,255,255,.65);font-size:.82rem;font-weight:500}
-.trust-inner div{display:flex;align-items:center;gap:.4rem;white-space:nowrap}
+.trust-bar{background:var(--blue-deeper);padding:1.25rem;border-bottom:1px solid rgba(75,163,216,.2);border-top:1px solid rgba(75,163,216,.1)}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500}
+.trust-inner div{display:flex;align-items:center;gap:.5rem}
 .trust-inner strong{color:var(--blue-bright)}
-@media(min-width:640px){.trust-inner{grid-template-columns:repeat(4,1fr);gap:1rem}}
 
 /* BLUE WAVE DIVIDER */
 .wave-divider{width:100%;overflow:hidden;line-height:0;margin-bottom:-2px}
@@ -240,7 +239,7 @@ footer strong{color:var(--white)}
       <a href="#services">Services</a>
       <a href="#gallery">Our Work</a>
       <a href="#reviews">Reviews</a>
-      <a href="locations.html">Locations</a>
+      <a href="index.html">← All Locations</a>
       <a href="#quote">Free Quote</a>
       <a href="tel:+17273101664" class="nav-cta">Call Now</a>
     </div>
@@ -261,7 +260,7 @@ footer strong{color:var(--white)}
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="#gallery" onclick="closeMobile()">Our Work</a>
   <a href="#reviews" onclick="closeMobile()">Reviews</a>
-  <a href="locations.html">📍 Locations</a>
+  <a href="index.html">← All Locations</a>
   <a href="#quote" onclick="closeMobile()">Free Quote</a>
   <a href="tel:+17273101664" class="mobile-cta">Call (727) 310-1664</a>
 </div>
@@ -274,7 +273,7 @@ footer strong{color:var(--white)}
   <div class="hero-inner fade-in">
     <div class="hero-tagline">Dirty Windows?</div>
     <div class="hero-badge">Tampa Bay's #1 Rated Window Cleaning</div>
-    <h1>Crystal Clear Windows.<br><span>Guaranteed.</span></h1>
+    <h1>Crystal Clear Windows.<br><span>Tampa Bay.</span></h1>
     <p>Residential and commercial window cleaning, power washing, screen repair, and gutter cleaning across Pinellas, Hillsborough, Manatee & Sarasota Counties.</p>
     <div class="hero-btns">
       <a href="#quote" class="btn btn-blue">Get a Free Quote</a>
@@ -294,10 +293,10 @@ footer strong{color:var(--white)}
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div>⭐ <strong>5-Star Rated</strong></div>
+    <div>⭐ <strong>5-Star</strong> on Google, Yelp & Thumbtack</div>
     <div>✅ Licensed &amp; Insured</div>
-    <div>🏆 <strong>Top Pro</strong> on Thumbtack</div>
-    <div>💯 Satisfaction Guaranteed</div>
+    <div>🏆 <strong>Top Pro</strong> on Thumbtack (40+ hires)</div>
+    <div>💯 100% Satisfaction Guarantee</div>
   </div>
 </div>
 
@@ -343,29 +342,73 @@ footer strong{color:var(--white)}
   </div>
 </section>
 
-<!-- LOCATIONS STRIP -->
+<!-- SERVICE AREA -->
 <div class="counties-section">
   <div class="counties-inner">
-    <h2>Now Serving 3 Locations</h2>
-    <p>From Tampa Bay to North Central Florida to Houston, Texas — 360° Window Wash is growing fast.</p>
+    <h2>Serving All of Tampa Bay</h2>
+    <p>Pinellas, Hillsborough, Manatee & Sarasota Counties</p>
     <div class="counties-grid">
-      <a href="locations.html" class="county-card fade-in" style="text-decoration:none">
+      <div class="county-card fade-in">
         <div class="county-icon">🌴</div>
-        <h3>Tampa Bay, FL</h3>
-        <p>Pinellas · Hillsborough · Manatee · Sarasota Counties</p>
-      </a>
-      <a href="locations.html" class="county-card fade-in" style="text-decoration:none">
-        <div class="county-icon">🌿</div>
-        <h3>North Central FL</h3>
-        <p>Wesley Chapel · New Tampa · Land O' Lakes & more</p>
-      </a>
-      <a href="locations.html" class="county-card fade-in" style="text-decoration:none">
-        <div class="county-icon">⭐</div>
-        <h3>Houston, TX</h3>
-        <p>Houston metro · The Woodlands · Sugar Land & more</p>
-      </a>
+        <h3>Tampa</h3>
+        <p>Hyde Park, Westshore, Downtown & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🏖️</div>
+        <h3>St. Petersburg</h3>
+        <p>Downtown, Old Northeast, Snell Isle & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">☀️</div>
+        <h3>Clearwater</h3>
+        <p>Downtown, Island Estates, Highland & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🌊</div>
+        <h3>Largo</h3>
+        <p>Ridgecrest, Belcher, Highland Lakes & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🐚</div>
+        <h3>Dunedin</h3>
+        <p>Historic Downtown, Dunedin Country Club & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🌺</div>
+        <h3>Pinellas Park</h3>
+        <p>Park Boulevard, Tyrone, Lake Pinellas & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">⚓</div>
+        <h3>Safety Harbor</h3>
+        <p>Waterfront, Downtown, Countryside & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🌴</div>
+        <h3>Bradenton</h3>
+        <p>Downtown, The Villages, Palma Sola & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🏖️</div>
+        <h3>Sarasota</h3>
+        <p>Downtown, Bayfront, Gulf Gate & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🌊</div>
+        <h3>Venice</h3>
+        <p>Historic Downtown, Venice Island & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🌳</div>
+        <h3>Brandon</h3>
+        <p>Westfield, Eagles Point, The Oaks & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">🏞️</div>
+        <h3>Riverview</h3>
+        <p>Summerfield, Panther Trace & more</p>
+      </div>
     </div>
-    <a href="locations.html" class="btn btn-glass" style="margin:2rem auto 0;display:inline-flex">View All Locations →</a>
   </div>
 </div>
 
@@ -404,9 +447,7 @@ footer strong{color:var(--white)}
     </a>
     <!-- Elfsight Instagram Feed -->
     <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(75,163,216,.15);border-radius:20px;overflow:hidden;padding:1.5rem;max-width:800px;margin:0 auto">
-      <div class="elfsight-app-da7daad9-8a54-47bd-8a99-8b857fe844bc" data-elfsight-app-lazy></div>
-    </div>
+    <div class="elfsight-app-da7daad9-8a54-47bd-8a99-8b857fe844bc" data-elfsight-app-lazy></div>
   </div>
 </section>
 
@@ -474,7 +515,7 @@ footer strong{color:var(--white)}
             <div class="form-group"><label>Last Name</label><input type="text" id="qlname" placeholder="Smith" required></div>
           </div>
           <div class="form-row">
-            <div class="form-group"><label>Phone</label><input type="tel" id="qphone" placeholder="(727) 555-1234" required></div>
+            <div class="form-group"><label>Phone</label><input type="tel" id="qphone" placeholder="(727) 310-1664" required></div>
             <div class="form-group"><label>Email</label><input type="email" id="qemail" placeholder="you@email.com"></div>
           </div>
           <div class="form-group">
@@ -545,7 +586,7 @@ footer strong{color:var(--white)}
     &nbsp;·&nbsp;
     <a href="https://www.yelp.com/biz/360-window-wash-pinellas-park-2">Yelp</a>
     &nbsp;·&nbsp;
-    <a href="locations.html">Locations</a>
+    <a href="index.html">All Locations</a>
     <br><br>
     &copy; 2026 360° Window Wash LLC. All rights reserved.
   </div>
@@ -577,7 +618,7 @@ async function submitQuote(e){
     const res=await fetch('https://formspree.io/f/mjgeoljw',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({_subject:'🪟 Quote Request — 360 Window Wash',...data})
+      body:JSON.stringify({_subject:'🪟 Quote Request — 360 Window Wash (Tampa Bay)',...data})
     });
     if(res.ok){
       document.getElementById('quoteForm').style.display='none';
