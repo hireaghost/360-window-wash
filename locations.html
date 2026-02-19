@@ -226,6 +226,48 @@ footer strong{color:var(--white)}
   section{padding:6rem 2rem}
 }
 @media(max-width:500px){.form-row{grid-template-columns:1fr}}
+
+/* ── LOCATIONS PAGE CUSTOM STYLES ── */
+.page-hero{position:relative;background:var(--navy);padding:8rem 1.5rem 4rem;text-align:center;overflow:hidden}
+.page-hero-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:700px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(75,163,216,.18) 0%,transparent 65%);pointer-events:none}
+.page-hero-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.page-hero-inner h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;color:var(--white);letter-spacing:-.03em;margin-bottom:.75rem}
+.page-hero-inner h1 span{background:linear-gradient(90deg,var(--blue-bright),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero-inner p{color:rgba(255,255,255,.6);font-size:1.05rem;line-height:1.7}
+
+.locations-section{padding:4rem 1.5rem 5rem;background:var(--gray-100)}
+.locations-inner{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:2rem}
+
+.location-card{background:var(--white);border-radius:var(--radius);border:1.5px solid var(--gray-200);overflow:hidden;transition:all .3s}
+.location-card:hover{border-color:var(--blue);box-shadow:0 12px 40px rgba(75,163,216,.12)}
+
+.location-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.75rem 2rem;border-bottom:1.5px solid var(--gray-200);flex-wrap:wrap}
+.location-badge{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:rgba(75,163,216,.1);padding:.3rem .8rem;border-radius:50px;display:inline-block;margin-bottom:.5rem}
+.location-header h2{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:.2rem}
+.region{color:var(--gray-600);font-size:.85rem}
+.insta-link{display:inline-flex;align-items:center;gap:.5rem;background:rgba(75,163,216,.08);border:1px solid rgba(75,163,216,.2);color:var(--blue);font-weight:600;font-size:.82rem;padding:.5rem 1rem;border-radius:50px;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.insta-link:hover{background:rgba(75,163,216,.18);transform:translateY(-1px)}
+.insta-link svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+
+.location-body{padding:1.75rem 2rem;display:flex;flex-direction:column;gap:1.5rem}
+.location-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.info-item{padding:.9rem 1rem;background:var(--gray-100);border-radius:var(--radius-sm)}
+.info-label{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:.3rem}
+.info-value{font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:.15rem}
+.info-value a{color:var(--blue)}
+.info-sub{font-size:.78rem;color:var(--gray-600)}
+
+.coverage-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.coverage-tag{background:rgba(75,163,216,.1);color:var(--blue-dark);border:1px solid rgba(75,163,216,.2);font-size:.8rem;font-weight:600;padding:.3rem .75rem;border-radius:50px}
+
+.location-cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn-outline{background:transparent;color:var(--blue);border:1.5px solid var(--blue);font-family:'Outfit',sans-serif;font-weight:700;font-size:.9rem;padding:.7rem 1.4rem;border-radius:50px;display:inline-flex;align-items:center;cursor:pointer;transition:all .2s}
+.btn-outline:hover{background:rgba(75,163,216,.08);transform:translateY(-1px)}
+
+.expand-section{background:var(--blue);padding:4rem 1.5rem;text-align:center}
+.expand-section h2{font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:var(--white);margin-bottom:.75rem}
+.expand-section p{color:rgba(255,255,255,.8);max-width:520px;margin:0 auto 2rem;font-size:1rem;line-height:1.7}
+
 </style>
 </head>
 <body>
