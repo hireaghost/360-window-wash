@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Own a 360° Window Wash Franchise | Tampa Bay's #1 Window Cleaning Brand</title>
+<meta name="description" content="Own a proven window cleaning business. Low startup costs, full training, and a 5-star brand behind you. Learn about 360° Window Wash franchise opportunities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--blue:#4BA3D8;--blue-dark:#2B7CB5;--blue-deeper:#1a5a8a;
+--navy:#0a1628;--navy-light:#111d33;
+--accent:#00e5a0;--accent-dark:#00c589;
+--white:#fff;--gray-100:#f4f7fa;--gray-200:#e2e8f0;--gray-400:#94a3b8;--gray-600:#64748b;
+--radius:16px;--radius-sm:10px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:48px;width:auto}
+.nav-back{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.nav-back:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:var(--navy);font-weight:700;font-size:.875rem;padding:.6rem 1.4rem;border-radius:50px;transition:all .2s}
+.nav-cta:hover{background:var(--white)}
+
+/* HERO */
+.hero{background:var(--navy);padding:8rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(75,163,216,.12),transparent 60%);pointer-events:none}
+.hero-inner{position:relative;max-width:750px;margin:0 auto;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,229,160,.12);border:1px solid rgba(0,229,160,.25);color:var(--accent);font-size:.8rem;font-weight:600;padding:.4rem 1rem;border-radius:50px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:1.25rem;letter-spacing:-.02em}
+.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:rgba(255,255,255,.6);font-size:1.1rem;line-height:1.7;max-width:580px;margin:0 auto 2.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;padding:1rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:all .25s}
+.btn-accent{background:var(--accent);color:var(--navy)}
+.btn-accent:hover{background:var(--white);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,229,160,.3)}
+
+/* WHY */
+section{padding:5rem 1.5rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:rgba(75,163,216,.1);padding:.35rem .9rem;border-radius:50px;margin-bottom:1rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:.75rem}
+.section-desc{color:var(--gray-600);font-size:1.05rem;line-height:1.7;max-width:560px}
+
+.why-grid{display:grid;gap:1.5rem;margin-top:3rem}
+.why-card{background:var(--gray-100);border-radius:var(--radius);padding:2.5rem 2rem;transition:all .3s;border:1px solid transparent}
+.why-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 10px 40px rgba(75,163,216,.1)}
+.why-icon{font-size:2.2rem;margin-bottom:1rem}
+.why-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.5rem}
+.why-card p{color:var(--gray-600);font-size:.9rem;line-height:1.65}
+
+/* STEPS */
+.steps-section{background:var(--navy);color:var(--white)}
+.steps-section .section-tag{color:var(--accent);background:rgba(0,229,160,.1)}
+.steps-section .section-title{color:var(--white)}
+.steps-grid{display:grid;gap:0;margin-top:3rem;max-width:700px}
+.step{display:flex;gap:1.5rem;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.step:last-child{border:none}
+.step-num{font-family:'Outfit',sans-serif;font-size:2.5rem;font-weight:900;color:var(--accent);opacity:.4;line-height:1;flex-shrink:0;width:50px}
+.step h3{color:var(--white);font-size:1.1rem;font-weight:700;margin-bottom:.35rem}
+.step p{color:var(--gray-400);font-size:.9rem;line-height:1.6}
+
+/* FORM */
+.form-section{background:linear-gradient(135deg,var(--blue-deeper),var(--blue-dark))}
+.form-wrapper{max-width:650px;margin:0 auto}
+.form-card{background:var(--white);border-radius:var(--radius);padding:3rem 2.5rem;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.form-card h3{font-size:1.4rem;font-weight:800;margin-bottom:.25rem}
+.form-card .subtitle{color:var(--gray-600);font-size:.9rem;margin-bottom:2rem}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.04em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);font-family:inherit;font-size:.9rem;transition:border-color .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--blue)}
+.form-group textarea{resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-submit{width:100%;justify-content:center;background:var(--navy);color:var(--white);font-size:1rem;margin-top:.5rem}
+.btn-submit:hover{background:var(--blue-deeper);transform:translateY(-2px)}
+
+/* GHOST RESPONSE */
+.ghost-response{margin-top:2rem;background:var(--navy);border-radius:var(--radius);padding:2rem;color:var(--white);animation:slideUp .4s ease;display:none}
+.ghost-header{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--gray-400);margin-bottom:1rem}
+.ghost-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+.ghost-msg{font-size:.95rem;line-height:1.7;color:rgba(255,255,255,.85)}
+.ghost-msg p{margin-bottom:.5rem}
+@keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.typing span{animation:blink 1.4s infinite;font-size:1.2rem}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:.2}50%{opacity:1}}
+
+/* FOOTER */
+footer{background:var(--navy-light);border-top:1px solid rgba(255,255,255,.06);padding:3rem 1.5rem;text-align:center;color:var(--gray-400);font-size:.85rem}
+footer a{color:var(--gray-400)}
+footer strong{color:var(--white)}
+
+.fade-in{opacity:0;transform:translateY(25px);transition:opacity .6s,transform .6s}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:768px){section{padding:6rem 2rem}}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <img src="logo-full.webp" alt="360° Window Wash" class="nav-logo">
+    <div style="display:flex;align-items:center;gap:1.5rem">
+      <a href="index.html" class="nav-back">← Back to Main Site</a>
+      <a href="#apply" class="nav-cta">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner fade-in">
+    <div class="hero-badge">🚀 Now Accepting Franchise Partners</div>
+    <h1>Own a 360° Window Wash.<br><span>Build Your Empire.</span></h1>
+    <p>A proven window cleaning brand with 5-star reviews, loyal customers, and a system that works. Low overhead, high margins, and a business you can be proud of.</p>
+    <a href="#apply" class="btn btn-accent">Apply for a Franchise →</a>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="section-inner">
+    <span class="section-tag">Why 360°</span>
+    <h2 class="section-title">Why This Opportunity<br>Is Different</h2>
+    <p class="section-desc">This isn't a franchise mill. It's a real business built by real people with real customers and real results.</p>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-icon">⭐</div>
+        <h3>5-Star Reputation</h3>
+        <p>Perfect ratings across Google, Yelp, Thumbtack, Angi, and HomeAdvisor. You're stepping into a brand customers already trust.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">💰</div>
+        <h3>Low Startup Costs</h3>
+        <p>No storefront needed. No massive equipment investment. Start lean, grow fast, and keep your overhead low from day one.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">📋</div>
+        <h3>Proven System</h3>
+        <p>We've already figured out what works. You get the playbook: pricing, marketing, operations, customer service. All dialed in.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">🎓</div>
+        <h3>Full Training &amp; Support</h3>
+        <p>Hands-on training from the founder. Ongoing support for marketing, operations, and growth. You're never on your own.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">📈</div>
+        <h3>Recurring Revenue</h3>
+        <p>Window cleaning is repeat business. Customers come back quarterly, annually, or on schedule. Predictable income you can count on.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">🌴</div>
+        <h3>Florida Is Booming</h3>
+        <p>Population growth, new construction, year-round demand. Florida is one of the best markets for exterior cleaning services in the country.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-section">
+  <div class="section-inner">
+    <span class="section-tag">How It Works</span>
+    <h2 class="section-title">From Application<br>to Opening Day</h2>
+    <div class="steps-grid">
+      <div class="step fade-in">
+        <div class="step-num">01</div>
+        <div><h3>Submit Your Application</h3><p>Fill out the form below. Tell us about yourself, your goals, and where you want to build your business.</p></div>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">02</div>
+        <div><h3>Discovery Call with Jeff</h3><p>Have a one-on-one conversation with the founder. Ask anything. We'll make sure it's the right fit for both sides.</p></div>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">03</div>
+        <div><h3>Training &amp; Setup</h3><p>Get hands-on training on operations, equipment, pricing, and marketing. We set up your territory and get you ready to launch.</p></div>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">04</div>
+        <div><h3>Launch Your Business</h3><p>Open your doors with a proven brand, a system that works, and ongoing support behind you. Start booking jobs from week one.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section id="apply" class="form-section">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:3rem">
+      <span class="section-tag" style="color:var(--accent);background:rgba(0,229,160,.15)">Apply Now</span>
+      <h2 class="section-title" style="color:var(--white)">Start Your Application</h2>
+      <p style="color:rgba(255,255,255,.65);max-width:500px;margin:.75rem auto 0;font-size:1rem">Fill this out and our team will be in touch to schedule your discovery call.</p>
+    </div>
+    <div class="form-wrapper">
+      <div class="form-card fade-in">
+        <h3>Franchise Application</h3>
+        <p class="subtitle">All fields are confidential. No obligation.</p>
+        <form id="franchiseForm" onsubmit="return submitFranchise(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="ffname" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="flname" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" id="fphone" placeholder="(555) 123-4567" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="femail" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Where do you want to operate?</label>
+            <input type="text" id="flocation" placeholder="City, state, or region" required>
+          </div>
+          <div class="form-group">
+            <label>Investment Budget</label>
+            <select id="fbudget" required>
+              <option value="">Select your range...</option>
+              <option value="Under $10K">Under $10,000</option>
+              <option value="$10K-$25K">$10,000 - $25,000</option>
+              <option value="$25K-$50K">$25,000 - $50,000</option>
+              <option value="$50K+">$50,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us about yourself</label>
+            <textarea id="fabout" rows="4" placeholder="Your background, why you're interested, any business experience, etc." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit" id="fsubmit">Submit Application →</button>
+        </form>
+
+        <div id="ghostResponse" class="ghost-response">
+          <div class="ghost-header">
+            <div class="ghost-dot"></div>
+            <span>360° Window Wash AI Assistant</span>
+          </div>
+          <div id="ghostMsg" class="ghost-msg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="max-width:1100px;margin:0 auto">
+    <strong>360° Window Wash LLC</strong> — Franchise Opportunities<br>
+    <a href="index.html">← Back to Main Site</a> · <a href="tel:+17273101664">(727) 310-1664</a><br><br>
+    &copy; 2026 360° Window Wash LLC. All rights reserved.
+  </div>
+</footer>
+
+<script>
+// Fade-in
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// Franchise form
+async function submitFranchise(e){
+  e.preventDefault();
+  const fname=document.getElementById('ffname').value;
+  const lname=document.getElementById('flname').value;
+  const phone=document.getElementById('fphone').value;
+  const email=document.getElementById('femail').value;
+  const location=document.getElementById('flocation').value;
+  const budget=document.getElementById('fbudget').value;
+  const about=document.getElementById('fabout').value;
+
+  const btn=document.getElementById('fsubmit');
+  btn.disabled=true;
+  btn.textContent='Submitting...';
+
+  try{
+    const res=await fetch('https://formspree.io/f/mjgeoljw',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:'🏢 Franchise Application — 360 Window Wash',
+        firstName:fname,
+        lastName:lname,
+        phone,
+        email,
+        targetLocation:location,
+        investmentBudget:budget,
+        about
+      })
+    });
+    if(res.ok){
+      const resp=document.getElementById('ghostResponse');
+      const msg=document.getElementById('ghostMsg');
+      resp.style.display='block';
+      msg.innerHTML=`
+        <p>Hey ${fname}! Thanks for applying to own a 360° Window Wash franchise. Jeff will be reaching out personally to schedule your discovery call.</p>
+        <p>Keep an eye on your phone — he's fast. Talk soon! 🪟✨</p>
+      `;
+      resp.scrollIntoView({behavior:'smooth',block:'center'});
+      btn.textContent='Application Submitted ✓';
+      btn.style.background='var(--accent)';
+      btn.style.color='var(--navy)';
+    } else {
+      btn.disabled=false;
+      btn.textContent='Submit Application →';
+      alert('Something went wrong. Please call us at (727) 310-1664.');
+    }
+  } catch(err){
+    btn.disabled=false;
+    btn.textContent='Submit Application →';
+    alert('Something went wrong. Please call us at (727) 310-1664.');
+  }
+  return false;
+}
+</script>
+</body>
+</html>

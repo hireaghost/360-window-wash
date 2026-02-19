@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>360° Window Wash | Dirty Windows? We Fix That.</title>
+<meta name="description" content="Dirty windows? 360° Window Wash is Tampa Bay's top-rated window cleaning company. Residential, commercial, power washing, screen repair, and gutter cleaning across Pinellas, Hillsborough, Manatee & Sarasota County.">
+<meta property="og:title" content="360° Window Wash | Crystal Clear Windows. Guaranteed.">
+<meta property="og:description" content="Dirty Windows? We fix that. Crystal clear windows guaranteed. Serving Pinellas, Hillsborough, Manatee & Sarasota Counties.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#419DDB;
+  --blue-dark:#2B7CB5;
+  --blue-deeper:#1a5a8a;
+  --blue-bright:#52B4F0;
+  --blue-mid:#3490c4;
+  --navy:#0a1628;
+  --navy-light:#111d33;
+  --accent:#00e5a0;
+  --accent-dark:#00c589;
+  --white:#fff;
+  --gray-100:#f4f7fa;
+  --gray-200:#e2e8f0;
+  --gray-400:#94a3b8;
+  --gray-600:#64748b;
+  --radius:16px;
+  --radius-sm:10px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(75,163,216,.15);transition:all .3s}
+.nav-inner{max-width:1200px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:48px;width:auto}
+.nav-links{display:none;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--blue-bright)}
+.nav-cta{background:var(--blue);color:var(--white);font-weight:700;font-size:.875rem;padding:.6rem 1.4rem;border-radius:50px;transition:all .2s}
+.nav-cta:hover{background:var(--blue-bright);transform:translateY(-1px)}
+.nav-phone{display:flex;align-items:center;gap:.4rem;color:var(--white);font-weight:600;font-size:.9rem}
+.nav-phone svg{width:18px;height:18px;fill:var(--blue)}
+@media(min-width:768px){.nav-links{display:flex}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;padding:7rem 1.5rem 4rem}
+.hero-bg{position:absolute;inset:0;background:url('hero-2025.jpg') center/cover no-repeat;opacity:.2;filter:saturate(0.5)}
+.hero-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,.97) 0%,rgba(27,90,138,.6) 50%,rgba(75,163,216,.25) 100%)}
+.hero-glow{position:absolute;top:-10%;right:-5%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(75,163,216,.18) 0%,transparent 65%);pointer-events:none}
+.hero-inner{position:relative;max-width:760px;z-index:2}
+.hero-tagline{font-family:'Outfit',sans-serif;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:700;color:var(--blue-bright);letter-spacing:.02em;margin-bottom:.6rem;opacity:.9}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(75,163,216,.15);border:1px solid rgba(75,163,216,.35);color:var(--blue-bright);font-size:.8rem;font-weight:600;padding:.4rem 1rem;border-radius:50px;margin-bottom:1.5rem;letter-spacing:.03em}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue-bright);animation:pulse 2s infinite}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:1.25rem;letter-spacing:-.03em}
+.hero h1 span{display:block;background:linear-gradient(90deg,var(--blue-bright),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:rgba(255,255,255,.65);font-size:1.1rem;line-height:1.7;max-width:540px;margin-bottom:2.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;padding:1rem 2rem;border-radius:50px;border:none;cursor:pointer;transition:all .25s}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-blue:hover{background:var(--blue-bright);transform:translateY(-2px);box-shadow:0 8px 30px rgba(75,163,216,.4)}
+.btn-accent{background:var(--accent);color:var(--navy)}
+.btn-accent:hover{background:#1ffdb8;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,229,160,.3)}
+.btn-glass{background:rgba(75,163,216,.1);color:var(--white);border:1px solid rgba(75,163,216,.25);backdrop-filter:blur(10px)}
+.btn-glass:hover{background:rgba(75,163,216,.2)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(75,163,216,.15)}
+.stat-num{font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;color:var(--white)}
+.stat-num span{color:var(--blue-bright)}
+.stat-label{color:var(--gray-400);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:.25rem}
+
+/* TRUST BAR */
+.trust-bar{background:var(--blue-deeper);padding:1.25rem;border-bottom:1px solid rgba(75,163,216,.2);border-top:1px solid rgba(75,163,216,.1)}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500}
+.trust-inner div{display:flex;align-items:center;gap:.5rem}
+.trust-inner strong{color:var(--blue-bright)}
+
+/* BLUE WAVE DIVIDER */
+.wave-divider{width:100%;overflow:hidden;line-height:0;margin-bottom:-2px}
+.wave-divider svg{display:block;width:100%;height:60px}
+
+/* SECTIONS */
+section{padding:5rem 1.5rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:rgba(75,163,216,.12);padding:.35rem .9rem;border-radius:50px;margin-bottom:1rem}
+.section-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:.75rem;letter-spacing:-.01em}
+.section-desc{color:var(--gray-600);font-size:1.05rem;line-height:1.7;max-width:560px}
+
+/* TAGLINE STRIP */
+.tagline-strip{background:var(--blue);padding:2.5rem 1.5rem;text-align:center}
+.tagline-strip h2{font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,4vw,2.8rem);font-weight:900;color:var(--white);letter-spacing:-.02em;margin-bottom:.4rem}
+.tagline-strip p{color:rgba(255,255,255,.8);font-size:1rem;font-weight:500}
+
+/* SERVICES */
+.services-section{background:var(--white)}
+.services-grid{display:grid;gap:1.5rem;margin-top:3rem}
+.service-card{position:relative;background:var(--white);border:1.5px solid var(--gray-200);border-radius:var(--radius);padding:2.5rem 2rem;overflow:hidden;transition:all .3s}
+.service-card:hover{border-color:var(--blue);transform:translateY(-5px);box-shadow:0 16px 48px rgba(75,163,216,.15)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--blue-bright));opacity:0;transition:opacity .3s}
+.service-card:hover::before{opacity:1}
+.service-icon{width:60px;height:60px;border-radius:14px;background:linear-gradient(135deg,rgba(75,163,216,.15),rgba(91,184,240,.1));display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.8rem}
+.service-card h3{font-size:1.2rem;font-weight:700;margin-bottom:.5rem;color:var(--navy)}
+.service-card p{color:var(--gray-600);font-size:.9rem;line-height:1.65}
+
+/* COUNTIES SECTION */
+.counties-section{background:var(--blue);padding:4rem 1.5rem}
+.counties-inner{max-width:1100px;margin:0 auto;text-align:center}
+.counties-inner h2{font-family:'Outfit',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--white);margin-bottom:.6rem}
+.counties-inner p{color:rgba(255,255,255,.8);margin-bottom:2.5rem;font-size:1rem}
+.counties-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem}
+.county-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:all .25s;backdrop-filter:blur(8px)}
+.county-card:hover{background:rgba(255,255,255,.2);transform:translateY(-3px)}
+.county-icon{font-size:2rem;margin-bottom:.75rem}
+.county-card h3{color:var(--white);font-size:1.15rem;font-weight:700;margin-bottom:.3rem}
+.county-card p{color:rgba(255,255,255,.7);font-size:.82rem}
+
+/* GALLERY */
+.gallery-section{background:var(--gray-100)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:3rem}
+.gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,40,.55) 0%,transparent 50%);pointer-events:none}
+.gallery-label{position:absolute;bottom:1rem;left:1rem;color:var(--white);font-family:'Outfit',sans-serif;font-weight:700;font-size:.95rem;z-index:2}
+
+/* INSTAGRAM SECTION */
+.instagram-section{background:var(--navy);padding:5rem 1.5rem;overflow:hidden;position:relative}
+.instagram-section::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(75,163,216,.12) 0%,transparent 70%);pointer-events:none}
+.instagram-inner{max-width:1100px;margin:0 auto;text-align:center}
+.instagram-inner .section-tag{color:var(--blue-bright);background:rgba(75,163,216,.12)}
+.instagram-inner h2{color:var(--white);font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;margin-bottom:.75rem}
+.instagram-inner p{color:var(--gray-400);max-width:480px;margin:0 auto 2.5rem;font-size:1rem;line-height:1.7}
+.insta-handle{display:inline-flex;align-items:center;gap:.6rem;background:rgba(75,163,216,.1);border:1px solid rgba(75,163,216,.25);color:var(--blue-bright);font-weight:700;font-size:1.1rem;padding:.7rem 1.6rem;border-radius:50px;margin-bottom:2.5rem;transition:all .25s}
+.insta-handle:hover{background:rgba(75,163,216,.2);transform:translateY(-2px)}
+.insta-handle svg{width:22px;height:22px;fill:currentColor}
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:700px;margin:0 auto 2.5rem}
+.insta-placeholder{aspect-ratio:1;border-radius:12px;background:linear-gradient(135deg,rgba(75,163,216,.15),rgba(27,90,138,.25));border:1px solid rgba(75,163,216,.15);display:flex;align-items:center;justify-content:center;font-size:1.6rem;transition:all .3s;cursor:pointer}
+.insta-placeholder:hover{background:rgba(75,163,216,.25);transform:scale(1.03)}
+@media(min-width:640px){.insta-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* REVIEWS */
+.reviews-section{background:var(--blue-deeper);color:var(--white);overflow:hidden}
+.reviews-section .section-tag{color:var(--blue-bright);background:rgba(75,163,216,.2)}
+.reviews-section .section-title{color:var(--white)}
+.reviews-grid{display:grid;gap:1.5rem;margin-top:3rem}
+.review-card{background:rgba(255,255,255,.07);border:1px solid rgba(75,163,216,.2);border-radius:var(--radius);padding:2rem;transition:all .3s}
+.review-card:hover{border-color:rgba(75,163,216,.5);background:rgba(255,255,255,.1)}
+.review-stars{color:#fbbf24;font-size:1.1rem;letter-spacing:2px;margin-bottom:1rem}
+.review-text{color:rgba(255,255,255,.8);font-size:1rem;line-height:1.7;margin-bottom:1.25rem;font-style:italic}
+.review-author{color:var(--blue-bright);font-size:.85rem;font-weight:600}
+
+/* QUOTE FORM */
+.quote-section{position:relative;background:linear-gradient(135deg,var(--navy) 0%,var(--blue-deeper) 60%,var(--blue-dark) 100%)}
+.quote-section::before{content:'';position:absolute;inset:0;background:url('hero.webp') center/cover no-repeat;opacity:.05}
+.quote-inner{position:relative;z-index:2;display:grid;gap:3rem;align-items:center}
+.quote-text{color:var(--white)}
+.quote-text .section-tag{color:var(--blue-bright);background:rgba(75,163,216,.15)}
+.quote-text .section-title{color:var(--white)}
+.quote-text .section-desc{color:rgba(255,255,255,.7)}
+.quote-features{display:flex;flex-direction:column;gap:.75rem;margin-top:2rem}
+.quote-feat{display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.85);font-size:.95rem}
+.quote-feat::before{content:'✓';width:24px;height:24px;border-radius:50%;background:rgba(75,163,216,.25);color:var(--blue-bright);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
+.quote-form{background:var(--white);border-radius:var(--radius);padding:2.5rem 2rem;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.quote-form h3{font-size:1.3rem;font-weight:800;margin-bottom:.25rem;color:var(--navy)}
+.quote-form .subtitle{color:var(--gray-600);font-size:.9rem;margin-bottom:1.5rem}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.04em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);font-family:inherit;font-size:.9rem;transition:border-color .2s;background:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--blue)}
+.form-group textarea{resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-submit{width:100%;justify-content:center;background:var(--blue);color:var(--white);font-size:1rem;margin-top:.5rem}
+.btn-submit:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 30px rgba(75,163,216,.4)}
+
+/* CTA */
+.cta-section{background:var(--blue);text-align:center;padding:5rem 1.5rem}
+.cta-section h2{color:var(--white);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:1rem}
+.cta-section p{color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2rem;font-size:1.05rem}
+
+/* FRANCHISE */
+.franchise-section{background:var(--navy);padding:6rem 1.5rem;position:relative;overflow:hidden}
+.franchise-section::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(75,163,216,.1),transparent 70%);pointer-events:none}
+.franchise-stat{text-align:center}
+
+/* FOOTER */
+footer{background:var(--navy-light);border-top:1px solid rgba(75,163,216,.1);padding:3rem 1.5rem;text-align:center;color:var(--gray-400);font-size:.85rem}
+footer a{color:var(--blue-bright)}
+footer strong{color:var(--white)}
+.footer-social{display:inline-flex;align-items:center;gap:.4rem;color:var(--blue-bright);font-weight:600}
+
+/* ANIMATIONS */
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.fade-in{opacity:0;transform:translateY(25px);transition:opacity .6s,transform .6s}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(min-width:640px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:768px){
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .quote-inner{grid-template-columns:1fr 1fr}
+  section{padding:6rem 2rem}
+}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <img src="logo-full.webp" alt="360° Window Wash" class="nav-logo">
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="locations.html">Locations</a>
+      <a href="#quote">Free Quote</a>
+      <a href="tel:+17273101664" class="nav-cta">Call Now</a>
+    </div>
+    <a href="tel:+17273101664" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      (727) 310-1664
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner fade-in">
+    <div class="hero-tagline">Dirty Windows?</div>
+    <div class="hero-badge">Tampa Bay's #1 Rated Window Cleaning</div>
+    <h1>Crystal Clear Windows.<br><span>Guaranteed.</span></h1>
+    <p>Residential and commercial window cleaning, power washing, screen repair, and gutter cleaning across Pinellas, Hillsborough, Manatee & Sarasota Counties.</p>
+    <div class="hero-btns">
+      <a href="#quote" class="btn btn-blue">Get a Free Quote</a>
+      <a href="tel:+17273101664" class="btn btn-glass">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+        Call (727) 310-1664
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">5<span>.0</span></div><div class="stat-label">Star Rating</div></div>
+      <div><div class="stat-num">500<span>+</span></div><div class="stat-label">Happy Customers</div></div>
+      <div><div class="stat-num">100<span>%</span></div><div class="stat-label">Satisfaction</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div>⭐ <strong>5-Star</strong> on Google, Yelp & Thumbtack</div>
+    <div>✅ Licensed &amp; Insured</div>
+    <div>🏆 <strong>Top Pro</strong> on Thumbtack (40+ hires)</div>
+    <div>💯 100% Satisfaction Guarantee</div>
+  </div>
+</div>
+
+<!-- TAGLINE STRIP -->
+<div class="tagline-strip">
+  <h2>Dirty Windows? We Fix That.</h2>
+  <p>Crystal clear results. Every time. Guaranteed.</p>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="section-inner">
+    <span class="section-tag">What We Do</span>
+    <h2 class="section-title">Professional Window Cleaning<br>& Exterior Services</h2>
+    <p class="section-desc">From residential homes to commercial storefronts, we handle every job with precision and care.</p>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🏠</div>
+        <h3>Residential Window Cleaning</h3>
+        <p>Interior and exterior window cleaning for homes across Tampa Bay. Crystal clear results every single time.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial Window Cleaning</h3>
+        <p>Storefronts, offices, and multi-story buildings. We keep your business looking sharp and professional.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💧</div>
+        <h3>Power Washing</h3>
+        <p>Driveways, sidewalks, patios, and building exteriors. Blast away years of grime and buildup instantly.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🪟</div>
+        <h3>Screen Repair</h3>
+        <p>Torn or damaged screens? We repair and replace window screens to keep bugs out and views crystal clear.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🌧️</div>
+        <h3>Gutter Cleaning</h3>
+        <p>Prevent water damage with professional gutter cleaning. We clear debris and ensure proper drainage every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTIES -->
+<div class="counties-section">
+  <div class="counties-inner">
+    <h2>Serving All of Southwest Florida</h2>
+    <p>We cover four counties so you never have to look far for spotless windows.</p>
+    <div class="counties-grid">
+      <div class="county-card fade-in">
+        <div class="county-icon">📍</div>
+        <h3>Pinellas County</h3>
+        <p>Tampa, St. Pete, Clearwater, Largo, Dunedin & more</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">📍</div>
+        <h3>Hillsborough County</h3>
+        <p>Tampa, Brandon, Riverview, Plant City & surrounding areas</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">📍</div>
+        <h3>Manatee County</h3>
+        <p>Bradenton, Palmetto, Lakewood Ranch & surrounding areas</p>
+      </div>
+      <div class="county-card fade-in">
+        <div class="county-icon">📍</div>
+        <h3>Sarasota County</h3>
+        <p>Sarasota, Venice, Osprey & surrounding areas</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+  <div class="section-inner">
+    <span class="section-tag">Our Work</span>
+    <h2 class="section-title">See the 360° Difference</h2>
+    <p class="section-desc">Real results from real jobs across Tampa Bay. The difference speaks for itself.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in">
+        <img src="work-1.jpg" alt="Window cleaning in Tampa" loading="lazy">
+        <div class="gallery-label">Residential — Tampa</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <img src="commercial-1.jpg" alt="Commercial window cleaning" loading="lazy">
+        <div class="gallery-label">Commercial — St. Pete</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <img src="residential-1.jpg" alt="Residential window cleaning Clearwater" loading="lazy">
+        <div class="gallery-label">Residential — Clearwater</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram-section">
+  <div class="instagram-inner">
+    <span class="section-tag">Follow Along</span>
+    <h2>We're Very Active on Instagram</h2>
+    <p>Before & afters, job highlights, and real results from across Tampa Bay. Follow us to see the 360° difference every day.</p>
+    <a href="https://www.instagram.com/360windowwash" target="_blank" rel="noopener" class="insta-handle">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @360windowwash
+    </a>
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/360windowwash" target="_blank" class="insta-placeholder">🪟</a>
+      <a href="https://www.instagram.com/360windowwash" target="_blank" class="insta-placeholder">✨</a>
+      <a href="https://www.instagram.com/360windowwash" target="_blank" class="insta-placeholder">🏠</a>
+      <a href="https://www.instagram.com/360windowwash" target="_blank" class="insta-placeholder">💧</a>
+      <a href="https://www.instagram.com/360windowwash" target="_blank" class="insta-placeholder">🏢</a>
+      <a href="https://www.instagram.com/360windowwash" target="_blank" class="insta-placeholder">⭐</a>
+    </div>
+    <a href="https://www.instagram.com/360windowwash" target="_blank" class="btn btn-glass" style="margin:0 auto">
+      View Our Instagram →
+    </a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="section-inner">
+    <span class="section-tag">Reviews</span>
+    <h2 class="section-title">Don't Take Our Word For It</h2>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"360 Window Wash did an amazing job. I love how responsive and communicative the owners were. They made our windows look brand new. Will definitely be using them again!"</p>
+        <div class="review-author">— Google Review</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Jeff and Kellie did an amazing job cleaning my windows. There was an immediate difference in the amount of light that comes into my home now. Will definitely be passing their information to my neighbors!"</p>
+        <div class="review-author">— Google Review</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Jeff is meticulous. They arrived on time, were professional and did a fantastic job. Cleaned the windows inside and out. The house feels new again. Highly recommend."</p>
+        <div class="review-author">— Angi Review</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Fast and friendly and they did a great job with cleaning my lanai deck and washing my outside windows!"</p>
+        <div class="review-author">— Barbara A., Thumbtack</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Jeff and his staff are professional, on time and accommodating. I would recommend 360 Window Wash LLC to anyone looking for window washing services."</p>
+        <div class="review-author">— HomeAdvisor Review</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I hired 360 Window Wash to clean my windows inside and out along with the screens. Fantastic results. They are professional and easy to work with."</p>
+        <div class="review-author">— Angi Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section id="quote" class="quote-section">
+  <div class="section-inner">
+    <div class="quote-inner">
+      <div class="quote-text">
+        <span class="section-tag">Free Estimate</span>
+        <h2 class="section-title" style="color:var(--white)">Dirty Windows?<br>Get a Free Quote.</h2>
+        <p class="section-desc" style="color:rgba(255,255,255,.7)">Tell us about your property and we'll get back to you fast. No pressure, no obligation — just crystal clear results.</p>
+        <div class="quote-features">
+          <div class="quote-feat">Free estimates, no hidden fees</div>
+          <div class="quote-feat">Same-week scheduling available</div>
+          <div class="quote-feat">100% satisfaction guaranteed</div>
+          <div class="quote-feat">Licensed, insured, and background-checked</div>
+        </div>
+      </div>
+      <div class="quote-form fade-in">
+        <h3>Request a Free Quote</h3>
+        <p class="subtitle">We'll get back to you within a few hours.</p>
+        <form id="quoteForm" onsubmit="return submitQuote(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" id="qfname" placeholder="Jeff" required></div>
+            <div class="form-group"><label>Last Name</label><input type="text" id="qlname" placeholder="Smith" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone</label><input type="tel" id="qphone" placeholder="(727) 555-1234" required></div>
+            <div class="form-group"><label>Email</label><input type="email" id="qemail" placeholder="you@email.com"></div>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select id="qservice" required>
+              <option value="">Select a service...</option>
+              <option value="Residential Window Cleaning">Residential Window Cleaning</option>
+              <option value="Commercial Window Cleaning">Commercial Window Cleaning</option>
+              <option value="Power Washing">Power Washing</option>
+              <option value="Screen Repair">Screen Repair / Replacement</option>
+              <option value="Gutter Cleaning">Gutter Cleaning</option>
+              <option value="Multiple Services">Multiple Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Property Type &amp; Details</label>
+            <textarea id="qdetails" rows="3" placeholder="e.g., 3-bed house, 20 windows, haven't been cleaned in 2 years..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit" id="qsubmit">Get My Free Quote →</button>
+        </form>
+        <div id="quoteSuccess" style="display:none;text-align:center;padding:2rem 0">
+          <div style="font-size:3rem;margin-bottom:1rem">✅</div>
+          <h3 style="color:var(--navy);margin-bottom:.5rem">Quote Request Received!</h3>
+          <p style="color:var(--gray-600);font-size:.95rem">We'll call you back within a few hours to discuss your project and provide a free estimate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRANCHISE -->
+<section class="franchise-section">
+  <div class="section-inner" style="text-align:center">
+    <span class="section-tag" style="background:rgba(75,163,216,.15);color:var(--blue-bright)">Opportunity</span>
+    <h2 class="section-title" style="color:var(--white)">Want to Own a<br>360° Window Wash?</h2>
+    <p style="color:rgba(255,255,255,.65);max-width:560px;margin:1rem auto 2.5rem;font-size:1.05rem;line-height:1.7">We're expanding across Florida and beyond. If you want to own a proven, profitable window cleaning business with a trusted brand behind you, we want to talk.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;margin-bottom:2.5rem">
+      <div class="franchise-stat"><div class="stat-num" style="color:var(--blue-bright)">5.0</div><div class="stat-label">Star Brand</div></div>
+      <div class="franchise-stat"><div class="stat-num" style="color:var(--blue-bright)">500+</div><div class="stat-label">Happy Customers</div></div>
+      <div class="franchise-stat"><div class="stat-num" style="color:var(--blue-bright)">Low</div><div class="stat-label">Startup Costs</div></div>
+      <div class="franchise-stat"><div class="stat-num" style="color:var(--blue-bright)">Full</div><div class="stat-label">Training &amp; Support</div></div>
+    </div>
+    <a href="franchise.html" class="btn btn-blue" style="font-size:1.1rem;padding:1.1rem 2.5rem">Learn About Franchise Opportunities →</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Dirty Windows? <br>We've Got You.</h2>
+  <p>Crystal clear windows, guaranteed. Serving Pinellas, Hillsborough, Manatee & Sarasota Counties.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+    <a href="#quote" class="btn btn-accent">Get a Free Quote</a>
+    <a href="tel:+17273101664" class="btn btn-glass" style="border-color:rgba(255,255,255,.3)">Call (727) 310-1664</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="max-width:1100px;margin:0 auto">
+    <strong>360° Window Wash LLC</strong><br>
+    Pinellas Park, FL | Serving Pinellas, Hillsborough, Manatee & Sarasota Counties<br><br>
+    <a href="tel:+17273101664">(727) 310-1664</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.instagram.com/360windowwash" target="_blank" class="footer-social">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @360windowwash
+    </a>
+    &nbsp;·&nbsp;
+    <a href="https://www.yelp.com/biz/360-window-wash-pinellas-park-2">Yelp</a>
+    &nbsp;·&nbsp;
+    <a href="locations.html">Locations</a>
+    <br><br>
+    &copy; 2026 360° Window Wash LLC. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const nav=document.querySelector('.nav');
+window.addEventListener('scroll',()=>nav.style.background=window.scrollY>50?'rgba(10,22,40,.98)':'rgba(10,22,40,.95)');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+async function submitQuote(e){
+  e.preventDefault();
+  const btn=document.getElementById('qsubmit');
+  btn.disabled=true;
+  btn.textContent='Sending...';
+  const data={
+    firstName:document.getElementById('qfname').value,
+    lastName:document.getElementById('qlname').value,
+    phone:document.getElementById('qphone').value,
+    email:document.getElementById('qemail').value,
+    service:document.getElementById('qservice').value,
+    details:document.getElementById('qdetails').value
+  };
+  try{
+    const res=await fetch('https://formspree.io/f/mjgeoljw',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({_subject:'🪟 Quote Request — 360 Window Wash',...data})
+    });
+    if(res.ok){
+      document.getElementById('quoteForm').style.display='none';
+      document.getElementById('quoteSuccess').style.display='block';
+    } else {
+      btn.disabled=false;
+      btn.textContent='Get My Free Quote →';
+      alert('Something went wrong. Please call us at (727) 310-1664.');
+    }
+  } catch(err){
+    btn.disabled=false;
+    btn.textContent='Get My Free Quote →';
+    alert('Something went wrong. Please call us at (727) 310-1664.');
+  }
+  return false;
+}
+</script>
+</body>
+</html>

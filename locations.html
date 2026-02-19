@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locations | 360° Window Wash</title>
+<meta name="description" content="360° Window Wash locations across Tampa Bay, North Central Florida, and Houston Texas. Find your local window cleaning experts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#419DDB;--blue-dark:#2B7CB5;--blue-deeper:#1a5a8a;--blue-bright:#52B4F0;
+  --navy:#0a1628;--navy-light:#111d33;--accent:#00e5a0;
+  --white:#fff;--gray-100:#f4f7fa;--gray-200:#e2e8f0;--gray-400:#94a3b8;--gray-600:#64748b;
+  --radius:16px;--radius-sm:10px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(75,163,216,.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:48px;width:auto}
+.nav-links{display:none;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue-bright)}
+.nav-cta{background:var(--blue);color:var(--white);font-weight:700;font-size:.875rem;padding:.6rem 1.4rem;border-radius:50px}
+.nav-phone{display:flex;align-items:center;gap:.4rem;color:var(--white);font-weight:600;font-size:.9rem}
+.nav-phone svg{width:18px;height:18px;fill:var(--blue)}
+@media(min-width:768px){.nav-links{display:flex}}
+
+/* PAGE HERO */
+.page-hero{background:var(--navy);padding:9rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,1) 0%,rgba(27,90,138,.5) 100%)}
+.page-hero-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(75,163,216,.15) 0%,transparent 65%);pointer-events:none}
+.page-hero-inner{position:relative;z-index:2}
+.page-hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;color:var(--white);letter-spacing:-.02em;margin-bottom:.75rem}
+.page-hero h1 span{background:linear-gradient(90deg,var(--blue-bright),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{color:rgba(255,255,255,.6);font-size:1.1rem;max-width:520px;margin:0 auto}
+
+/* LOCATIONS */
+.locations-section{padding:5rem 1.5rem;background:var(--gray-100)}
+.locations-inner{max-width:1100px;margin:0 auto}
+
+.location-card{background:var(--white);border-radius:20px;overflow:hidden;margin-bottom:2.5rem;box-shadow:0 4px 24px rgba(10,22,40,.06);border:1px solid var(--gray-200);transition:all .3s}
+.location-card:hover{box-shadow:0 12px 40px rgba(75,163,216,.12);border-color:rgba(75,163,216,.25);transform:translateY(-2px)}
+
+.location-header{background:linear-gradient(135deg,var(--blue-deeper) 0%,var(--blue-dark) 100%);padding:2.5rem 2.5rem 2rem;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.location-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(75,163,216,.2);border:1px solid rgba(75,163,216,.35);color:var(--blue-bright);font-size:.72rem;font-weight:700;padding:.3rem .85rem;border-radius:50px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.75rem}
+.location-header h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;color:var(--white);margin-bottom:.3rem}
+.location-header .region{color:rgba(255,255,255,.55);font-size:.9rem}
+.location-header .insta-link{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:var(--white);font-size:.85rem;font-weight:600;padding:.5rem 1.1rem;border-radius:50px;transition:all .2s;white-space:nowrap}
+.location-header .insta-link:hover{background:rgba(255,255,255,.18)}
+.location-header .insta-link svg{width:16px;height:16px;fill:currentColor}
+
+.location-body{padding:2.5rem;display:grid;gap:2rem}
+.location-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.info-item{display:flex;flex-direction:column;gap:.25rem}
+.info-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.1rem}
+.info-value{font-size:1rem;font-weight:600;color:var(--navy)}
+.info-value a{color:var(--blue-dark);transition:color .2s}
+.info-value a:hover{color:var(--blue)}
+.info-sub{font-size:.85rem;color:var(--gray-600);margin-top:.1rem;line-height:1.5}
+
+.coverage-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.coverage-tag{background:rgba(75,163,216,.08);border:1px solid rgba(75,163,216,.2);color:var(--blue-dark);font-size:.78rem;font-weight:600;padding:.3rem .75rem;border-radius:50px}
+
+.location-cta{display:flex;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;border-top:1px solid var(--gray-200)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Outfit',sans-serif;font-weight:700;font-size:.95rem;padding:.8rem 1.75rem;border-radius:50px;border:none;cursor:pointer;transition:all .25s}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(75,163,216,.35)}
+.btn-outline{background:transparent;color:var(--blue-dark);border:1.5px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:var(--white)}
+
+/* COMING SOON card */
+.location-card.coming-soon .location-header{background:linear-gradient(135deg,#1e293b 0%,#2d3f56 100%)}
+.coming-soon-body{padding:2.5rem;display:flex;align-items:center;gap:1.5rem}
+.coming-soon-icon{font-size:3rem;flex-shrink:0}
+.coming-soon-text h3{font-size:1.2rem;font-weight:700;margin-bottom:.3rem}
+.coming-soon-text p{color:var(--gray-600);font-size:.9rem;line-height:1.6}
+
+/* EXPAND CTA */
+.expand-section{background:var(--blue);padding:5rem 1.5rem;text-align:center}
+.expand-section h2{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--white);margin-bottom:.75rem}
+.expand-section p{color:rgba(255,255,255,.8);max-width:520px;margin:0 auto 2rem;font-size:1rem;line-height:1.7}
+
+/* FOOTER */
+footer{background:var(--navy-light);border-top:1px solid rgba(75,163,216,.1);padding:3rem 1.5rem;text-align:center;color:var(--gray-400);font-size:.85rem}
+footer a{color:var(--blue-bright)}
+footer strong{color:var(--white)}
+
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.fade-in{opacity:0;transform:translateY(25px);transition:opacity .6s,transform .6s}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.location-header{flex-direction:column}.coming-soon-body{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo-full.webp" alt="360° Window Wash" class="nav-logo"></a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Our Work</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="locations.html" class="active">Locations</a>
+      <a href="index.html#quote">Free Quote</a>
+      <a href="tel:+17273101664" class="nav-cta">Call Now</a>
+    </div>
+    <a href="tel:+17273101664" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      (727) 310-1664
+    </a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <h1>Our <span>Locations</span></h1>
+    <p>360° Window Wash is growing. Find your local franchise and get crystal clear windows guaranteed.</p>
+  </div>
+</div>
+
+<section class="locations-section">
+  <div class="locations-inner">
+
+    <!-- TAMPA BAY -->
+    <div class="location-card fade-in">
+      <div class="location-header">
+        <div>
+          <div class="location-badge">📍 Original Location</div>
+          <h2>Tampa Bay, FL</h2>
+          <div class="region">Pinellas · Hillsborough · Manatee · Sarasota Counties</div>
+        </div>
+        <a href="https://www.instagram.com/360windowwash" target="_blank" rel="noopener" class="insta-link">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @360windowwash
+        </a>
+      </div>
+      <div class="location-body">
+        <div class="location-info">
+          <div class="info-item">
+            <div class="info-label">Owner</div>
+            <div class="info-value">Jeff &amp; Kellie</div>
+            <div class="info-sub">360° Window Wash LLC — Original founders</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:+17273101664">(727) 310-1664</a></div>
+            <div class="info-sub">Call or text for a free quote</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Based In</div>
+            <div class="info-value">Pinellas Park, FL</div>
+            <div class="info-sub">Serving all of Tampa Bay</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Rating</div>
+            <div class="info-value">⭐ 5.0 Stars</div>
+            <div class="info-sub">Google · Yelp · Thumbtack · Angi</div>
+          </div>
+        </div>
+        <div>
+          <div class="info-label" style="margin-bottom:.6rem">Coverage Area</div>
+          <div class="coverage-tags">
+            <span class="coverage-tag">Tampa</span>
+            <span class="coverage-tag">St. Petersburg</span>
+            <span class="coverage-tag">Clearwater</span>
+            <span class="coverage-tag">Largo</span>
+            <span class="coverage-tag">Dunedin</span>
+            <span class="coverage-tag">Pinellas Park</span>
+            <span class="coverage-tag">Safety Harbor</span>
+            <span class="coverage-tag">Bradenton</span>
+            <span class="coverage-tag">Sarasota</span>
+            <span class="coverage-tag">Venice</span>
+            <span class="coverage-tag">Brandon</span>
+            <span class="coverage-tag">Riverview</span>
+          </div>
+        </div>
+        <div class="location-cta">
+          <a href="index.html#quote" class="btn btn-blue">Get a Free Quote</a>
+          <a href="tel:+17273101664" class="btn btn-outline">Call (727) 310-1664</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NORTH CENTRAL FLORIDA -->
+    <div class="location-card fade-in">
+      <div class="location-header">
+        <div>
+          <div class="location-badge">📍 North Tampa / Pasco County</div>
+          <h2>North Tampa / Pasco County</h2>
+          <div class="region">Wesley Chapel · New Tampa · Land O' Lakes &amp; surrounding areas</div>
+        </div>
+        <a href="https://www.instagram.com/360windowwash" target="_blank" rel="noopener" class="insta-link">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @360windowwash
+        </a>
+      </div>
+      <div class="location-body">
+        <div class="location-info">
+          <div class="info-item">
+            <div class="info-label">Owner</div>
+            <div class="info-value">Cooper</div>
+            <div class="info-sub">360° Window Wash — North Tampa / Pasco County Franchise</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:+18135532159">(813) 553-2159</a></div>
+            <div class="info-sub">Call or text for a free quote</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Email</div>
+            <div class="info-value"><a href="mailto:cooper@360windowwash.com">cooper@360windowwash.com</a></div>
+            <div class="info-sub">Response within a few hours</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Services</div>
+            <div class="info-value">Window Cleaning</div>
+            <div class="info-sub">Power Washing · Screen Repair · Gutter Cleaning</div>
+          </div>
+        </div>
+        <div>
+          <div class="info-label" style="margin-bottom:.6rem">Coverage Area</div>
+          <div class="coverage-tags">
+            <span class="coverage-tag">Wesley Chapel</span>
+            <span class="coverage-tag">Zephyrhills</span>
+            <span class="coverage-tag">New Tampa</span>
+            <span class="coverage-tag">Land O' Lakes</span>
+            <span class="coverage-tag">Lutz</span>
+            <span class="coverage-tag">Dade City</span>
+            <span class="coverage-tag">Ocala</span>
+            <span class="coverage-tag">Gainesville</span>
+          </div>
+        </div>
+        <div class="location-cta">
+          <a href="tel:+18135532159" class="btn btn-blue">Call Cooper — (813) 553-2159</a>
+          <a href="mailto:cooper@360windowwash.com" class="btn btn-outline">Email Cooper</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOUSTON TEXAS -->
+    <div class="location-card fade-in">
+      <div class="location-header">
+        <div>
+          <div class="location-badge">📍 Houston, Texas</div>
+          <h2>Houston, TX</h2>
+          <div class="region">Houston metro &amp; surrounding areas</div>
+        </div>
+        <a href="https://www.instagram.com/360windowwash?igsh=YTkwa2V1dHA2aHVo" target="_blank" rel="noopener" class="insta-link">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @360windowwash
+        </a>
+      </div>
+      <div class="location-body">
+        <div class="location-info">
+          <div class="info-item">
+            <div class="info-label">Franchise</div>
+            <div class="info-value">Houston, TX</div>
+            <div class="info-sub">360° Window Wash — Texas Franchise</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:+17135103199">(713) 510-3199</a></div>
+            <div class="info-sub">Call or text for a free quote</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Email</div>
+            <div class="info-value"><a href="mailto:houston@360windowwash.com">houston@360windowwash.com</a></div>
+            <div class="info-sub">Response within a few hours</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Services</div>
+            <div class="info-value">Window Cleaning</div>
+            <div class="info-sub">Power Washing · Screen Repair · Gutter Cleaning</div>
+          </div>
+        </div>
+        <div>
+          <div class="info-label" style="margin-bottom:.6rem">Coverage Area</div>
+          <div class="coverage-tags">
+            <span class="coverage-tag">Houston</span>
+            <span class="coverage-tag">The Woodlands</span>
+            <span class="coverage-tag">Sugar Land</span>
+            <span class="coverage-tag">Katy</span>
+            <span class="coverage-tag">Pearland</span>
+            <span class="coverage-tag">Pasadena</span>
+            <span class="coverage-tag">Cypress</span>
+            <span class="coverage-tag">Spring</span>
+          </div>
+        </div>
+        <div class="location-cta">
+          <a href="tel:+17135103199" class="btn btn-blue">Call Houston — (713) 510-3199</a>
+          <a href="mailto:houston@360windowwash.com" class="btn btn-outline">Email Us</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FRANCHISE CTA -->
+<div class="expand-section">
+  <h2>Want to Bring 360° to Your City?</h2>
+  <p>We're expanding across the country. Low startup costs, proven systems, and a brand that customers already trust.</p>
+  <a href="franchise.html" class="btn btn-blue" style="margin:0 auto;display:inline-flex;background:var(--white);color:var(--blue-dark)">Explore Franchise Opportunities →</a>
+</div>
+
+<footer>
+  <div style="max-width:1100px;margin:0 auto">
+    <strong>360° Window Wash LLC</strong><br>
+    Pinellas Park, FL | Serving Pinellas, Hillsborough, Manatee & Sarasota Counties<br><br>
+    <a href="tel:+17273101664">(727) 310-1664</a> &nbsp;·&nbsp;
+    <a href="https://www.instagram.com/360windowwash" target="_blank">@360windowwash</a> &nbsp;·&nbsp;
+    <a href="index.html">Home</a>
+    <br><br>
+    &copy; 2026 360° Window Wash LLC. All rights reserved.
+  </div>
+</footer>
+
+<script>
+const nav=document.querySelector('.nav');
+window.addEventListener('scroll',()=>nav.style.background=window.scrollY>50?'rgba(10,22,40,.98)':'rgba(10,22,40,.95)');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
