@@ -93,10 +93,11 @@ a{text-decoration:none;color:inherit}
 .stat-label{color:var(--gray-400);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-top:.25rem}
 
 /* TRUST BAR */
-.trust-bar{background:var(--blue-deeper);padding:1.25rem;border-bottom:1px solid rgba(75,163,216,.2);border-top:1px solid rgba(75,163,216,.1)}
-.trust-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:500}
-.trust-inner div{display:flex;align-items:center;gap:.5rem}
+.trust-bar{background:var(--blue-deeper);padding:1.25rem 1rem;border-bottom:1px solid rgba(75,163,216,.2);border-top:1px solid rgba(75,163,216,.1)}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:.75rem 1rem;color:rgba(255,255,255,.65);font-size:.82rem;font-weight:500}
+.trust-inner div{display:flex;align-items:center;gap:.4rem;white-space:nowrap}
 .trust-inner strong{color:var(--blue-bright)}
+@media(min-width:640px){.trust-inner{grid-template-columns:repeat(4,1fr);gap:1rem}}
 
 /* BLUE WAVE DIVIDER */
 .wave-divider{width:100%;overflow:hidden;line-height:0;margin-bottom:-2px}
@@ -418,11 +419,24 @@ footer strong{color:var(--white)}
     <span class="section-tag">Our Work</span>
     <h2 class="section-title">See the 360° Difference</h2>
     <p class="section-desc">Real results from real jobs across Tampa Bay. The difference speaks for itself.</p>
-    <div class="gallery-grid">
+        <div class="gallery-grid">
       <div class="gallery-item fade-in">
-        <img src="work-1.jpg" alt="Window cleaning in Tampa" loading="lazy">
-        <div class="gallery-label">Residential — Tampa</div>
+        <img src="work-1.jpg" alt="New construction window cleaning" loading="lazy">
+        <div class="gallery-label">⭐⭐⭐⭐⭐</div>
       </div>
+      <div class="gallery-item fade-in">
+        <img src="commercial-1.jpg" alt="Commercial window cleaning" loading="lazy">
+        <div class="gallery-label">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <img src="work-action.jpg" alt="High-rise window cleaning" loading="lazy">
+        <div class="gallery-label">⭐⭐⭐⭐⭐</div>
+      </div>
+      <div class="gallery-item fade-in">
+        <img src="residential-1.jpg" alt="Luxury residential window cleaning" loading="lazy">
+        <div class="gallery-label">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
       <div class="gallery-item fade-in">
         <img src="commercial-1.jpg" alt="Commercial window cleaning" loading="lazy">
         <div class="gallery-label">Commercial — St. Pete</div>
