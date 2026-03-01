@@ -249,6 +249,10 @@ footer strong{color:var(--white)}
 .insta-link:hover{background:rgba(75,163,216,.18);transform:translateY(-1px)}
 .insta-link svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
 
+.location-owner-photo{position:relative;overflow:hidden;border-radius:12px;margin:0 0 .25rem}
+.location-owner-photo img{width:100%;height:280px;object-fit:cover;object-position:center top;display:block;border-radius:12px}
+.owner-photo-caption{position:absolute;bottom:0;left:0;right:0;padding:.6rem 1rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.02em;border-radius:0 0 12px 12px}
+@media(max-width:600px){.location-owner-photo img{height:220px}}
 .location-body{padding:1.75rem 2rem;display:flex;flex-direction:column;gap:1.5rem}
 .location-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
 .info-item{padding:.9rem 1rem;background:var(--gray-100);border-radius:var(--radius-sm)}
@@ -315,12 +319,15 @@ footer strong{color:var(--white)}
         </a>
       </div>
       <div class="location-body">
+        <div class="location-owner-photo">
+          <img src="/jeff-kellie.jpg" alt="Jeff and Kellie Burnett — 360 Window Wash">
+          <div class="owner-photo-caption">Jeff &amp; Kellie Burnett — Founders</div>
+        </div>
         <div class="location-info">
           <div class="info-item">
             <div class="info-label">Owner</div>
             <div class="info-value">Jeff &amp; Kellie</div>
             <div class="info-sub">360° Window Wash LLC — Original founders</div>
-            <img src="/jeff-kellie.jpg" alt="Jeff and Kellie Burnett — 360 Window Wash" style="width:100%;border-radius:12px;margin-top:0.75rem;object-fit:cover;">
           </div>
           <div class="info-item">
             <div class="info-label">Phone</div>
@@ -377,12 +384,15 @@ footer strong{color:var(--white)}
         </a>
       </div>
       <div class="location-body">
+        <div class="location-owner-photo">
+          <img src="/cooper.jpg" alt="Cooper — 360 Window Wash North Central Florida">
+          <div class="owner-photo-caption">Cooper — North Tampa / Pasco County</div>
+        </div>
         <div class="location-info">
           <div class="info-item">
             <div class="info-label">Owner</div>
             <div class="info-value">Cooper</div>
             <div class="info-sub">360° Window Wash — North Tampa / Pasco County Franchise</div>
-            <img src="/cooper.jpg" alt="Cooper — 360 Window Wash North Central Florida" style="width:100%;border-radius:12px;margin-top:0.75rem;object-fit:cover;">
           </div>
           <div class="info-item">
             <div class="info-label">Phone</div>
