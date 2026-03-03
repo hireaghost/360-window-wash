@@ -492,6 +492,10 @@ footer strong{color:var(--white)}
             <div class="form-group"><label>Email</label><input type="email" id="qemail" placeholder="you@email.com"></div>
           </div>
           <div class="form-group">
+            <label>Property Address <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--gray-400)">(optional)</span></label>
+            <input type="text" id="qaddress" placeholder="Helps us give you an accurate quote">
+          </div>
+          <div class="form-group">
             <label>Service Needed</label>
             <select id="qservice" required>
               <option value="">Select a service...</option>
@@ -584,6 +588,7 @@ async function submitQuote(e){
     lastName:document.getElementById('qlname').value,
     phone:document.getElementById('qphone').value,
     email:document.getElementById('qemail').value,
+    address:document.getElementById('qaddress').value,
     service:document.getElementById('qservice').value,
     details:document.getElementById('qdetails').value
   };
